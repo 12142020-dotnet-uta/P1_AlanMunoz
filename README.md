@@ -28,7 +28,8 @@ To-do list:
 `git clone https://github.com/12142020-dotnet-uta/P1_AlanMunoz.git`
 
 For the creation of a Database using EF Code First will be required:
-* In the project `P1_RepositoryLayer` it haves the `StoreDbContext.cs` file, and inside the file we have the connection string to the Database in the method OnConfiguring(...), we change the connection string to our database to work with.
+* In the project `P1_RepositoryLayer` it haves the `StoreDbContext.cs` file, and inside the file we have the connection string to the Database in the method OnConfiguring(...), we change the connection string to our database to work with:
+
 `protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
