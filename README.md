@@ -27,25 +27,15 @@ To-do list:
    
 `git clone https://github.com/12142020-dotnet-uta/P1_AlanMunoz.git`
 
-(include all environment setup steps)
-
-
-> Be sure to include BOTH Windows and Unix command  
-> Be sure to mention if the commands only work on a specific platform (eg. AWS, GCP)
-
 For the creation of a Database using EF Code First will be required:
 * In the project `P1_RepositoryLayer` it haves the `StoreDbContext.cs` file, and inside the file we have the connection string to the Database in the method OnConfiguring(...), we change the connection string to our database to work with.
-`
-protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+`protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder.UseSqlServer(@"NewConnectionString");
-
             }
-
-        }
-`
+        }`
 * Then it require a Migration for apply the `Migrations` files and to implement the models in the file with the command in the Package Manager Console: 
 `Update-Database`
 
